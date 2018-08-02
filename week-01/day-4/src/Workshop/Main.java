@@ -498,3 +498,35 @@ class ConditionalVariableMutation {
     System.out.println(out3);
   }
 }
+
+class IWontcheatontheexams {
+  public static void main(String[] args) {
+    int a = 0;
+    while (a < 100) {
+      System.out.println("I wont cheat in the exam.");
+      a += 1;
+    }
+  }
+}
+
+class Printeven {
+  public static void main(String[] args) {
+    int a = 0;
+    while (a < 501) {
+      System.out.println(a);
+      a += 2;
+    }
+  }
+}
+
+class Multiplication table  {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    int number = scanner.nextInt();
+    int a = 1;
+    while (a < 11) {
+      System.out.println(number*a);
+      a += 1;
+    }
+  }
+}
