@@ -523,8 +523,7 @@ class Multiplication table  {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     int number = scanner.nextInt();
-    int a = 1;
-    while (a < 11) {
+    for (int i = 1;  < 11) {
       System.out.println(number*a);
       a += 1;
     }
