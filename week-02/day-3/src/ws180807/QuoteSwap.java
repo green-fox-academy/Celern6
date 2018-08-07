@@ -18,6 +18,7 @@ public class QuoteSwap{
   }
   public static ArrayList<String> quoteSwap(ArrayList<String> fixed){
     Collections.swap(fixed, 2, 5);
-    return fixed;
+    String nice;
+
   }
 }
