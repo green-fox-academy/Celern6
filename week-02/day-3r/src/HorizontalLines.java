@@ -8,11 +8,11 @@ import java.awt.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class GoToCenter {
+public class HorizontalLines {
   public static void mainDraw(Graphics graphics) {
     // Create a line drawing function that takes 2 parameters:
     // The x and y coordinates of the line's starting point
-    // and draws a line from that point to the center of the canvas.
+    // and draws a 50 long horizontal line from that point.
     // Draw 3 lines with that function. Use loop for that.
 
     Scanner scanner = new Scanner(System.in);
@@ -22,13 +22,13 @@ public class GoToCenter {
     int y = scanner.nextInt();
 
     drawLine2(x, y, graphics);
-
   }
-  public static void drawLine2(int a, int b, Graphics graphics){
+
+  public static void drawLine2(int a, int b, Graphics graphics) {
     int i = 0;
-    while (i<=100){
-      graphics.drawLine(a, b+i, a+49, b );
-      i=i+50;
+    while (i <= 100) {
+      graphics.drawLine(a, b + i, a + 49, b+i);
+      i = i + 50;
     }
   }
 
