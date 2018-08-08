@@ -11,23 +11,24 @@ public class RainbowBoxFunction {
     // The square size, and the fill color,
     // and draws a square of that size and color to the center of the canvas.
     // Create a loop that fills the canvas with rainbow colored squares.
-   int x = 20;
+    int x = 20;
 
-
-    drawRBRect(x, , graphics);
+    drawRBRect(x, graphics);
   }
-  public static void drawRBRect(int a, , Graphics graphics) {
-    int i = 0;
-    while (i<=120){
-      int x = a+i;
-      graphics.setColor();
-      graphics.drawRect(WIDTH/2-x/2, HEIGHT/2-x/2, a+i, a+i);
-      i = i+60;
+
+  public static void drawRBRect(int a, Graphics graphics) {
+      graphics.setColor(new Color(0,0,0));
+      graphics.fillRect(WIDTH/2-a/2, HEIGHT/2-a/2, a, a);
+      int b = a + 2;
+      while (b <= 320){
+        int randomc = (int )(Math.random() * 255 + 1);
+        graphics.setColor(new Color(randomc, randomc, randomc));
+        graphics.drawRect((WIDTH/2-b/2)+1, (HEIGHT/2-b/2+1), b, b);
+        b = b+2;
     }
   }
 
 
-  }
 
   // Don't touch the code below
   static int WIDTH = 320;
