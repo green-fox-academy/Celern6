@@ -14,6 +14,8 @@ public class LineInTheMiddle {
     graphics.setColor(Color.green);
     graphics.drawLine(160,0,160, 343);
 
+
+
   }
 
   // Don't touch the code below

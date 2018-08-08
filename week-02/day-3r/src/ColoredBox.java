@@ -8,16 +8,16 @@ public class ColoredBox {
   public static void mainDraw(Graphics graphics) {
     // Draw a box that has different colored lines on each edge.
     graphics.setColor(Color.green);
-
+    graphics.drawLine(5,5, 5, 15);
 
     graphics.setColor(Color.red);
-
+    graphics.drawLine(5, 5, 15,5);
 
     graphics.setColor(Color.BLACK);
+    graphics.drawLine(5,15,15,15);
 
-
-
-
+    graphics.setColor(Color.BLUE);
+    graphics.drawLine(15,5,15,15);
 
   }
 
