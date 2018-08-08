@@ -21,9 +21,9 @@ public class RainbowBoxFunction {
       graphics.fillRect(WIDTH/2-a/2, HEIGHT/2-a/2, a, a);
       int b = a + 2;
       while (b <= 320){
-        int randomc = (int )(Math.random() * 255 + 1);
+        int randomc = (int )(Math.random() * 256);
         graphics.setColor(new Color(randomc, randomc, randomc));
-        graphics.drawRect((WIDTH/2-b/2)+1, (HEIGHT/2-b/2+1), b, b);
+        graphics.drawRect(WIDTH/2-b/2, HEIGHT/2-b/2, b, b);
         b = b+2;
     }
   }
