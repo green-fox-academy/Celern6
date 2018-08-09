@@ -17,7 +17,7 @@ public class HeWillNever {
     map.put(3, "say goodbye ");
 
     for (int i = 0; i < notSoCrypticMessage.length; i++){
-      out = map.get(notSoCrypticMessage[i]);
+      out += map.get(notSoCrypticMessage[i]);
     }
 
     // Things are a little bit messed up
