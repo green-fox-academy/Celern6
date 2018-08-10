@@ -3,7 +3,7 @@ package ws180810;
 import javax.swing.*;
 
 import java.awt.*;
-// Fill the canvas with a checkerboard pattern.
+
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class EnvelopeStar {
