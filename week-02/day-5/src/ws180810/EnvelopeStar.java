@@ -1,29 +1,43 @@
+package ws180810;
+
 import javax.swing.*;
 
 import java.awt.*;
 // Fill the canvas with a checkerboard pattern.
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class LinePlay {
+public class EnvelopeStar {
   public static void mainDraw(Graphics graphics) {
+    graphics.setColor(Color.green);
     int i = 0;
-    int j = 10;
-    while (i <= WIDTH && j <= WIDTH) {
-
-      graphics.drawLine(i,0, 320, j);
+    int j = 0;
+    while (i <= WIDTH/2 && j <= WIDTH/2) {
+      graphics.drawLine(i,HEIGHT/2, WIDTH/2, HEIGHT/2 - j);
       i += 10;
       j += 10;
     }
     int k = 0;
-    int m = 10;
-    while (k <= WIDTH && m <= WIDTH) {
-      graphics.drawLine(0,k, m, 320);
+    int l = 0;
+    while (k <= WIDTH/2 && l <= WIDTH/2) {
+      graphics.drawLine(WIDTH-k,HEIGHT/2, WIDTH/2, HEIGHT/2-l);
       k += 10;
+      l += 10;
+    }
+    int m = 0;
+    int n = 0;
+    while (m <= WIDTH/2 && n <= WIDTH/2) {
+      graphics.drawLine(m, HEIGHT/2, WIDTH/2, HEIGHT/2 + n);
       m += 10;
+      n += 10;
     }
-
-
+    int o = 0;
+    int p = 0;
+    while (o <= WIDTH/2 && p <= WIDTH/2) {
+      graphics.drawLine(WIDTH/2, HEIGHT/2+o, WIDTH-p, HEIGHT/2);
+      o += 10;
+      p += 10;
     }
+  }
 
   // Don't touch the code below
   static int WIDTH = 320;
@@ -46,3 +60,4 @@ public class LinePlay {
     }
   }
 }
+
