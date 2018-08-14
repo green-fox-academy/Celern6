@@ -21,7 +21,7 @@ public class WriteMultipleLines {
     String szo = "alma";
     Integer szam = 6;
 
-    writer(datapath,szo, szam);
+    writer(datapath, szo, szam);
   }
   public static void writer (String path, String line, int linenum){
     Path filepath = Paths.get(path);
