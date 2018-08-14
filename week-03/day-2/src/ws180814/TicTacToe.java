@@ -26,7 +26,12 @@ public class TicTacToe {
   }
   public static String ticTacResult(String game) throws IOException {
     Path filepath = Paths.get(game);
-    ArrayList<String> tictac = Files.readAllLines(filepath);
-    
+    ArrayList<String> tictac = (ArrayList<String>) Files.readAllLines(filepath);
+    int j = 0;
+    for (int i = 0; i < tictac.size(); i++){
+      for (int j= 0; j < tictac.size(); j++){
+        if ()
+      }
+    }
   }
 }
