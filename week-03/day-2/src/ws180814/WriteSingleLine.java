@@ -15,7 +15,7 @@ import java.util.List;
     public static void main(String[] args) {
       Path filePath = Paths.get("my-file.txt");
       List<String> content = new ArrayList<>();
-      content.add("My first line.");
+      content.add("Andras");
       try {
         Files.write(filePath, content);
       } catch (Exception e) {
