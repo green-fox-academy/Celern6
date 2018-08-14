@@ -14,7 +14,7 @@ public class PrintEachLine {
     try {
       Path filepath = Paths.get("valami.txt");
       List<String> lines = Files.readAllLines(filepath);
-      for (String i : lines);
+      for (String i : lines)
       {
         System.out.println(i);
       }
