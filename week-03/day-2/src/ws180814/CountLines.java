@@ -19,7 +19,6 @@ public class CountLines{
      for (String i : lines)
      {
        counter += 1;}
-       return counter;
      } catch (Exception e){
      System.out.println("0");
      }
