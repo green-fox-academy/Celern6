@@ -33,7 +33,7 @@ public class Dominoes {
         for(int i = 0; i < indominoes.size(); i++){
           if (fixeddominoes.get(j).getValues()[1] == indominoes.get(i).getValues()[0]) {
           fixeddominoes.add(indominoes.get(i));
-          j = +1;
+          j++;
           }
         }
       }
