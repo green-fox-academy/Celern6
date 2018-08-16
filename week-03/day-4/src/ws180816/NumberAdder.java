@@ -3,12 +3,13 @@ package ws180816;
 public class NumberAdder {
   public static void main(String[] args) {
       int n = 12;
-      countdown(n);
+      numberAdder(n);
   }
-  public static int countdown (int number){
-    if (number >= countdown(number-number+1)){
-      countdown(number-number+1);
-      System.out.println(countdown(number));
+  public static int numberAdder (int number){
+    int i = 0;
+    if (number >= i){
+      System.out.println(numberAdder(number));
+      i += 1;
     }
     return number;
   }
