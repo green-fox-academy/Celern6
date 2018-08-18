@@ -19,17 +19,7 @@ class HelloMe {
 // Volume: 1000
 
 // Did You mean edges?
-class Cuboid {
-  public static void main(String[] args) {
-    double a = 100;
-    double b = 50;
-    double c = 20;
 
-    System.out.println("Surface area: "+(2*(a*b)+(a*c)+(b*c)));
-    System.out.println("Volume: "+(a*b*c));
-
-  }
-}
   class SecondsInADay {
     public static void main(String[] args) {
       int currentHours = 14;
@@ -40,7 +30,8 @@ class Cuboid {
       // Write a program that prints the remaining seconds (as an integer) from a
       // day if the current time is represented by the variables
     }
-  }
+}
+
 class HelloUser {
   public static void main(String[] args) {
     // Modify this program to greet user instead of the World!
