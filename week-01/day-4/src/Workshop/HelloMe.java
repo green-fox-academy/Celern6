@@ -8,34 +8,7 @@ class HelloMe {
 }
 
 
-class Bmi {
-  public static void main(String[] args) {
-    double massInKg = 81.2;
-    double heightInM = 1.78;
 
-    // Print the Body mass index (BMI) based on these values
-    System.out.println((massInKg/heightInM)/heightInM);
-  }
-}
-
-class DefineBasicInfo {
-  public static void main(String[] args) {
-    // Define several things as a variable then print their values
-    // Your name as a string
-    // Your age as an integer
-    // Your height in meters as a double
-    // Whether you are married or not as a boolean
-    String myname = "András";
-    int myage = 33;
-    double height = 1.83;
-    boolean marriage = true;
-
-    System.out.println(myname);
-    System.out.println(myage);
-    System.out.println(height);
-    System.out.println(marriage);
-  }
-}
 
 class VariableMutation {
   public static void main(String[] args) {
