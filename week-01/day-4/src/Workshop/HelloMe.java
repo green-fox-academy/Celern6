@@ -20,17 +20,7 @@ class HelloMe {
 
 // Did You mean edges?
 
-  class SecondsInADay {
-    public static void main(String[] args) {
-      int currentHours = 14;
-      int currentMinutes = 34;
-      int currentSeconds = 42;
 
-      System.out.println((86400-currentHours*3600)+(3600-currentMinutes*60)+(60-currentSeconds));
-      // Write a program that prints the remaining seconds (as an integer) from a
-      // day if the current time is represented by the variables
-    }
-}
 
 class HelloUser {
   public static void main(String[] args) {
@@ -43,16 +33,7 @@ class HelloUser {
   }
 }
 
-class MileToKmConverter {
-  public static void main(String[] args) {
-    // Write a program that asks for an integer that is a distance in kilometers,
-    // then it converts that value to miles and prints it
-    Scanner scanner = new Scanner(System.in);
-    System.out.println("Please add the distance in kilometers You would like to convert to miles");
-    int userInput1 = scanner.nextInt();
-    System.out.println("The distance in miles is: "+(userInput1*0.621371));
-  }
-}
+
 
 class AnimalsAndLegs {
   public static void main(String[] args) {
