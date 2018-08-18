@@ -35,41 +35,12 @@ class HelloUser {
 
 
 
-class AnimalsAndLegs {
-  public static void main(String[] args) {
-    // Write a program that asks for two integers
-    // The first represents the number of chickens the farmer has
-    // The second represents the number of pigs owned by the farmer
-    // It should print how many legs all the animals have
-    Scanner scanner = new Scanner(System.in);
-    System.out.println("Please enter the number of chickens: ");
-    int userInput1 = scanner.nextInt();
-    System.out.println("Please enter the number of pigs: ");
-    int userInput2 = scanner.nextInt();
-    System.out.println("The animals on the farm has "+((userInput1*2)+(userInput2*4))+" legs.");
-  }
-}
+
 // Write a program that asks for 5 integers in a row,
 // then it should print the sum and the average of these numbers like:
 //
 // Sum: 22, Average: 4.4
-class AverageofInput {
-  public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
-    System.out.println("Please enter the first number");
-    int userInput1 = scanner.nextInt();
-    System.out.println("Please enter the second number");
-    int userInput2 = scanner.nextInt();
-    System.out.println("Please enter the third number");
-    int userInput3 = scanner.nextInt();
-    System.out.println("Please enter the fourth number");
-    int userInput4 = scanner.nextInt();
-    System.out.println("Please enter the fifth number");
-    int userInput5 = scanner.nextInt();
-    System.out.println("Sum: "+(userInput1+userInput2+userInput3+userInput4+userInput5)+" Average: "+((userInput1+userInput2+userInput3+userInput4+userInput5)/5));
 
-  }
-  }
 
 // Write a program that reads a number from the standard input,
 // Then prints "Odd" if the number is odd, or "Even" if it is even.
