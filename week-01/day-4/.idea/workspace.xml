@@ -184,7 +184,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534583484668" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534583609753" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
@@ -199,7 +199,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.HelloOthers">
+  <component name="RunManager" selected="Application.IntroduceYourself">
     <configuration name="HelloOthers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Workshop.HelloOthers" />
       <module name="day-4" />
@@ -226,8 +226,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IWontcheatontheexams" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Workshop.IWontcheatontheexams" />
+    <configuration name="IntroduceYourself" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Workshop.IntroduceYourself" />
       <module name="day-4" />
       <extension name="coverage">
         <pattern>
@@ -266,19 +266,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.IWontcheatontheexams" />
       <item itemvalue="Application.Printeven" />
       <item itemvalue="Application.Multiplication" />
       <item itemvalue="Application.HumptyDumpty" />
       <item itemvalue="Application.HelloOthers" />
+      <item itemvalue="Application.IntroduceYourself" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.IntroduceYourself" />
         <item itemvalue="Application.HelloOthers" />
         <item itemvalue="Application.HumptyDumpty" />
         <item itemvalue="Application.Multiplication" />
         <item itemvalue="Application.Printeven" />
-        <item itemvalue="Application.IWontcheatontheexams" />
       </list>
     </recent_temporary>
   </component>
