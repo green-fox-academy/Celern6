@@ -7,28 +7,7 @@ class HelloMe {
   }
 }
 
-class HumptyDumpty {
-  public static void main(String[] args) {
-    // Modify this program to print Humpty Dumpty riddle correctly
-    System.out.println("Humpty Dumpty sat on a wall,");
-    System.out.println("Humpty Dumpty had a great fall.");
-    System.out.println("All the king's horses and all the king's men");
-    System.out.println("Couldn't put Humpty together again.");
-  }
-}
-class HelloOthers {
-  public static void main(String[] args) {
-    // Greet 3 of your classmates with this program, in three separate lines
-    // like:
-    //
-    // Hello, Esther!
-    // Hello, Mary!
-    // Hello, Joe!
-    System.out.println("Hey there Sama!");
-    System.out.println("Hello Szilvi!");
-    System.out.println("Ahoy Csabi!");
-  }
-}
+
 
 class IntroduceYourself {
   public static void main(String[] args) {
