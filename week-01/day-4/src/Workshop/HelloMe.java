@@ -44,40 +44,13 @@ class HelloUser {
 
 // Write a program that reads a number from the standard input,
 // Then prints "Odd" if the number is odd, or "Even" if it is even.
-class OddEven {
-  public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
-    System.out.println("Please enter a number");
-    int userInput1 = scanner.nextInt();
-    if (userInput1%2 == 0){
-      System.out.println("The number is Even");
-    }else{
-      System.out.println("The number is odd");
-    }
-    }
-}
+
 // Write a program that reads a number form the standard input,
 // If the number is zero or smaller it should print: Not enough
 // If the number is one it should print: One
 // If the number is two it should print: Two
 // If the number is more than two it should print: A lot
-class Onetwoalot {
-  // how about odd numbers?
-  public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
-    System.out.println("Please enter a number");
-    int userInput1 = scanner.nextInt();
-    if (userInput1 <= 0){
-      System.out.println("Not enough");
-    } else if (userInput1 == 1){
-      System.out.println("One");
-    }else if (userInput1 == 2){
-      System.out.println("Two");
-    }else if (userInput1 > 2){
-      System.out.println("A lot");
-    }
-  }
-}
+
 
 
 class PrintBigger {
