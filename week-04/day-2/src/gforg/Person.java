@@ -16,4 +16,9 @@ public class Person {
     this.age = age;
     this.gender = gender;
   }
+  Person(){
+    name = "Jane Doe";
+    age = 30;
+    gender = "female";
+  }
 }
