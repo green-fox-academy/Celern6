@@ -1,12 +1,12 @@
 package gforg;
 
 public class Person {
-  public String name;
-  public int age;
-  public String gender;
+  String name;
+  int age;
+  String gender;
 
   public void introduce (){
-    System.out.println("Hi, i'm" + name + "a" + age + "year old" + gender);
+    System.out.println("Hi, i'm " + name + " a " + age + " year old " + gender);
   }
   public void getGoal(){
     System.out.println("My goal is: Live for the moment.");
@@ -17,8 +17,8 @@ public class Person {
     this.gender = gender;
   }
   Person(){
-    name = "Jane Doe";
-    age = 30;
-    gender = "female";
+    this.name = "Jane Doe";
+    this.age = 30;
+    this.gender = "female";
   }
 }

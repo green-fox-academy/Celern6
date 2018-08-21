@@ -1,28 +1,29 @@
 package gforg;
 
 public class Student extends Person {
-  public String previousOrganization;
-  public int skippedDays;
+  String previousOrganization;
+  int skippedDays;
+
 
   public void getGoal() {
     System.out.println("Be a junior software developer!");
   }
   public void introduce(){
-    System.out.println("Hi, i'm" + name + "a" + age + "year old" + gender + "from" + previousOrganization + "who skipped" + skippedDays + "days from the course already.");
+    System.out.println("Hi, i'm " + name + " a " + age + " year old " + gender + " from " + previousOrganization + " who skipped " + skippedDays + " days from the course already.");
   }
   public void skipDays(int numberofDays){
-    skippedDays += numberofDays;
+    this.skippedDays += numberofDays;
   }
 
   public Student(String name, int age, String gender, String previousOrganization){
-    skippedDays = 0;
+    this.skippedDays = 0;
   }
 
   Student (){
-    name = "Jane Doe";
-    age = 30;
-    gender = "female";
-    previousOrganization = "The School of Life";
-    skippedDays = 0;
+    this.name = "Jane Doe";
+    this.age = 30;
+    this.gender = "female";
+    this.previousOrganization = "The School of Life";
+    this.skippedDays = 0;
   }
 }

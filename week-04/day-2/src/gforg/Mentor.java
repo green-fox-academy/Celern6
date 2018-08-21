@@ -13,9 +13,9 @@ public class Mentor extends Person{
   public Mentor (String name, int age, String gender, String level){
   }
   Mentor (){
-    name = "Jane Doe";
-    age = 30;
-    gender = "female";
-    level = "Intermediate";
+    this.name = "Jane Doe";
+    this.age = 30;
+    this.gender = "female";
+    this.level = "Intermediate";
   }
 }
