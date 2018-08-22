@@ -12,7 +12,9 @@ public class Main {
 
       Garden kertem = new Garden();
       kertem.addFlower(blueflower);
-      
+      kertem.addFlower(yellowflower);
+      kertem.addTree(orangetree);
+      kertem.addTree(purpletree);
 
     }
 }
