@@ -1,10 +1,12 @@
 package charsequence;
 
-public class Gnirts implements CharSequence {
+public class Shifter implements CharSequence {
   String x;
+  int a;
 
-  public Gnirts(String x){
+  public Shifter(String x, int a){
     this.x = x;
+    this.a = a;
   }
 
   @Override
@@ -14,7 +16,7 @@ public class Gnirts implements CharSequence {
 
   @Override
   public char charAt(int index) {
-    return x.charAt(x.length()-1-index);
+    return x.charAt(index+a);
   }
 
   @Override
