@@ -28,10 +28,35 @@ public class Carrier {
     for (Aircraft plane : carrier) {
       totaldamage += plane.currentAmmo*plane.baseDamage;
     }
-    System.out.println("HP: " + HP + ", Aircraft count: " + carrier.size() + " Ammo storage: " + ammostore + " Total damage: " + totaldamage);
+    System.out.println("HP: " + HP + ", Aircraft count: " + carrier.size() + " Ammo storage: "
+        + ammostore + " Total damage: " + totaldamage);
     System.out.println("Aircrafts:");
     for (Aircraft plane : carrier) {
       System.out.println(plane.getStatus());
+    }
+  }
+
+  public void fill(){
+    int ammoneed = 0;
+    for (Aircraft plane : carrier) {
+      ammoneed += plane.maxAmmo-plane.currentAmmo;
+    }
+    if (ammoneed > ammostore) {
+      for ( Aircraft plane : carrier) {
+        if (plane.isPriority() == true){
+          ammostore = plane.reFill(ammostore);
+        }
+      }
+      for (Aircraft plane : carrier) {
+        if (plane.isPriority() == false){
+          ammostore = plane.reFill(ammostore);
+        }
+      }
+    }
+    else {
+      for (Aircraft plane : carrier) {
+        ammostore = plane.reFill(ammostore);
+      }
     }
   }
 
