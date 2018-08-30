@@ -21,7 +21,7 @@ public class Hero extends BaseHero implements Punchable {
     if (motivation < 25) {
       motlevel = 0;
     }
-    if (motivation > 25 && motivation <= 40){
+    if (motivation >= 25 && motivation <= 40){
       motlevel = 1;
     }
     if (motivation > 40){
