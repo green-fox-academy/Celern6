@@ -39,7 +39,7 @@ public class Carrier {
   public void fill(){
     int ammoneed = 0;
     for (Aircraft plane : carrier) {
-      ammoneed += plane.maxAmmo-plane.currentAmmo;
+      ammoneed += plane.maxAmmo - plane.currentAmmo;
     }
     if (ammoneed > ammostore) {
       for ( Aircraft plane : carrier) {
@@ -58,6 +58,14 @@ public class Carrier {
         ammostore = plane.reFill(ammostore);
       }
     }
+  }
+  public void fight(Carrier other){
+    int damage = 0;
+    for (Aircraft plane : carrier) {
+      damage += plane.baseDamage*plane.currentAmmo;
+      plane.currentAmmo = 0;
+    }
+    other.HP -= damage;
   }
 
 }
