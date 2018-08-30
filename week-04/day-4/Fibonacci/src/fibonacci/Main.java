@@ -11,7 +11,7 @@ public class Main {
 	// write your code here
     }
     public static int fibonacci(int szam){
-      
+
 
 
       return ;
