@@ -1,3 +1,15 @@
+h1{
+    text-align: center;
+}
+
 form{
     margin: 0 auto;
+    width: 400px;
+}
+
+#username, #password{
+    text-align: center;
+}
+#passreminder{
+    text-align: right;
 }
