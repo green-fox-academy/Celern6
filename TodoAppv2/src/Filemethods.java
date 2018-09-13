@@ -13,9 +13,9 @@ public class Filemethods {
     return Files.readAllLines(filepath);
   }
 
-  public void fileWriter (List<String> inputlist) throws IOException {
+  public void fileAppender (List<String> inputlist) throws IOException {
     Path filepath = Paths.get("List.txt");
-    Files.write(filepath, inputlist);
+    Files.write(filepath, inputlist, APPEND);
   }
 
 }
