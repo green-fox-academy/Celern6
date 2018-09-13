@@ -4,11 +4,18 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 
+import static java.nio.file.StandardOpenOption.APPEND;
+
 public class Filemethods {
 
   public List<String> fileReader() throws IOException {
     Path filepath = Paths.get("List.txt");
     return Files.readAllLines(filepath);
+  }
+
+  public void fileWriter (List<String> inputlist) throws IOException {
+    Path filepath = Paths.get("List.txt");
+    Files.write(filepath, inputlist);
   }
 
 }

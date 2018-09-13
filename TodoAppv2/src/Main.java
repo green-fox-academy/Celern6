@@ -13,5 +13,9 @@ public class Main {
       if (args[0].equals("-l")){
         mytoDo.listing();
       }
+
+      if (args[0].equals("-a")){
+        mytoDo.addToList(args[1]);
+      }
     }
 }

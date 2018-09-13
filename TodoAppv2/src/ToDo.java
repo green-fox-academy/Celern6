@@ -1,4 +1,7 @@
 import java.io.IOException;
+import java.nio.file.Files;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ToDo extends Filemethods{
 
@@ -18,9 +21,23 @@ public class ToDo extends Filemethods{
 
   public void listing() throws IOException {
     int i = 1;
-    for (String oneElement : fileReader()) {
-      System.out.println(i + " - " + oneElement);
-      i++;
+    if (fileReader().size() > 0){
+      for (String oneElement : fileReader()) {
+        System.out.println(i + " - " + oneElement);
+        i++;
+      }
+    } else if (fileReader().size() == 0){
+      System.out.println("No todos for today! :)");
     }
   }
+
+  public void addToList (String addedtask) throws IOException {
+    List<String> templist = new ArrayList<>();
+    templist.add(addedtask);
+    fileWriter(templist);
+  }
+
+
+
+
 }
