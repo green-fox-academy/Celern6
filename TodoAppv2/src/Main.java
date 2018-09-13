@@ -3,7 +3,7 @@ import java.io.IOException;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-	// write your code here
+
       ToDo mytoDo = new ToDo();
 
       if (args.length == 0){
@@ -23,6 +23,7 @@ public class Main {
         }
 
         if (args[0].equals("-r")) {
+          tryParse(args[1]);
           if (args.length < 2.) {
             System.out.println("Unable to remove: no index provided.");
           } else if (Integer.parseInt(args[1]) > args.length){
@@ -33,4 +34,14 @@ public class Main {
         }
       }
     }
+
+    public static Integer tryParse(String text) {
+      try {
+        return Integer.parseInt(text);
+      } catch (NumberFormatException e) {
+        System.out.println("Unable to remove: index is not a number");
+        return null;
+      }
+    }
 }
+
