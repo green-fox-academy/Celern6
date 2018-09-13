@@ -18,4 +18,9 @@ public class Filemethods {
     Files.write(filepath, inputlist, APPEND);
   }
 
+  public void fileOverwriter (List<String> inputlist) throws IOException {
+    Path filepath = Paths.get("List.txt");
+    Files.write(filepath, inputlist);
+  }
+
 }

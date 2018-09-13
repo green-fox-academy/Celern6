@@ -17,5 +17,9 @@ public class Main {
       if (args[0].equals("-a")){
         mytoDo.addToList(args[1]);
       }
+
+      if (args[0].equals("-r")){
+        mytoDo.removeFromList(args[1]);
+      }
     }
 }

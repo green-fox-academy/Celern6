@@ -37,7 +37,12 @@ public class ToDo extends Filemethods{
     fileAppender(templist);
   }
 
-
+  public void removeFromList (String tasknumberinstring) throws IOException {
+    Integer tasknumber = Integer.parseInt(tasknumberinstring);
+    List<String> templist = fileReader();
+    templist.remove(tasknumber-1);
+    fileOverwriter(templist);
+  }
 
 
 }
