@@ -33,7 +33,7 @@ public class ToDo extends Filemethods{
 
   public void addToList (String addedtask) throws IOException {
     List<String> templist = new ArrayList<>();
-    templist.add(addedtask);
+    templist.add("[ ] " + addedtask);
     fileAppender(templist);
   }
 
@@ -43,6 +43,8 @@ public class ToDo extends Filemethods{
     templist.remove(tasknumber-1);
     fileOverwriter(templist);
   }
+
+  //public void checkingTask ();
 
 
 }
