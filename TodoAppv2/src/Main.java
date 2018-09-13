@@ -32,6 +32,11 @@ public class Main {
             mytoDo.removeFromList(args[1]);
           }
         }
+        else {
+          System.out.println("Unsupported argument.");
+          mytoDo.noArgs();
+        }
+
       }
     }
 
