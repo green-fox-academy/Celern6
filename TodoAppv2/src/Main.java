@@ -8,18 +8,23 @@ public class Main {
 
       if (args.length == 0){
         mytoDo.noArgs();
-      }
+      } else {
 
-      if (args[0].equals("-l")){
-        mytoDo.listing();
-      }
+        if (args[0].equals("-l")){
+          mytoDo.listing();
+        }
 
-      if (args[0].equals("-a")){
-        mytoDo.addToList(args[1]);
-      }
+        if (args[0].equals("-a")){
+          mytoDo.addToList(args[1]);
+        }
 
-      if (args[0].equals("-r")){
-        mytoDo.removeFromList(args[1]);
+        if (args[0].equals("-r")){
+          if(args.length < 2.){
+            System.out.println("Unable to add: no task provided");
+          } else {
+            mytoDo.removeFromList(args[1]);
+          }
+        }
       }
     }
 }
