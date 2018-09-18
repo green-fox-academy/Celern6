@@ -9,6 +9,7 @@
     <table>
         <thead>
             <tr>
+                <th>Index</th>
                 <th>Name</th>
                 <th>Balance</th>
                 <th>Animal Type</th>
@@ -16,11 +17,10 @@
         </thead>
         <tbody>
             <tr th:each="o : ${accountlist}">
+                <td th:text="${oStat.index}"></td>
                 <td th:text="${o.name}"></td>
                 <td th:text="${o.balance}"></td>
                 <td th:text="${o.animalType}"></td>
-
-
             </tr>
         </tbody>
     </table>
