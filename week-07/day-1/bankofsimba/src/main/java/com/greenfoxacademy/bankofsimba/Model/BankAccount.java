@@ -5,13 +5,15 @@ public class BankAccount {
   private String name;
   private long balance;
   private String animalType;
+  private String isking;
 
   public BankAccount(){}
 
-  public BankAccount(String name, long balance, String animalType){
+  public BankAccount(String name, long balance, String animalType, String isking){
     this.name = name;
     this.balance = balance;
     this.animalType = animalType;
+    this.isking = isking;
   }
 
   public String getName() {
@@ -39,4 +41,11 @@ public class BankAccount {
   }
 
 
+  public String getIsking() {
+    return isking;
+  }
+
+  public void setIsking(String isking) {
+    this.isking = isking;
+  }
 }

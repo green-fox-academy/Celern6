@@ -1,7 +1,6 @@
 package com.greenfoxacademy.bankofsimba.Controllers;
 
 import com.greenfoxacademy.bankofsimba.Model.Accounts;
-import com.greenfoxacademy.bankofsimba.Model.BankAccount;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
