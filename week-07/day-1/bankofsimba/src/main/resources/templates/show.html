@@ -5,20 +5,24 @@
     <link rel="stylesheet" th:href="@{/style.css}" />
     <meta charset="utf-8" />
 </head>
-<table>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Balance</th>
-            <th>Animal Type</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td th:text="${name}"></td>
-            <td th:text="${#numbers.formatDecimal(balance, 3, 2, 'COMMA')} + ' zebra'"></td>
-            <td th:text="${animalType}"></td>
-        </tr>
-    </tbody>
-</table>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Balance</th>
+                <th>Animal Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="o : ${accountlist}">
+                <td th:text="${o.name}"></td>
+                <td th:text="${o.balance}"></td>
+                <td th:text="${o.animalType}"></td>
+
+
+            </tr>
+        </tbody>
+    </table>
+</body>
 </html>

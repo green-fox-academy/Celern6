@@ -6,6 +6,8 @@ public class BankAccount {
   private long balance;
   private String animalType;
 
+  public BankAccount(){}
+
   public BankAccount(String name, long balance, String animalType){
     this.name = name;
     this.balance = balance;
