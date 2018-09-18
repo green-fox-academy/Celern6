@@ -1,5 +1,6 @@
 package com.greenfoxacademy.bankofsimba.Controllers;
 
+import com.greenfoxacademy.bankofsimba.Model.Accounts;
 import com.greenfoxacademy.bankofsimba.Model.BankAccount;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,10 +13,12 @@ public class ShowController {
 
   @GetMapping("/show")
   public String show (Model model){
-    BankAccount simba = new BankAccount("Simba", 2000, "Lion");
-    model.addAttribute("name", simba.getName());
-    model.addAttribute("balance", simba.getBalance());
-    model.addAttribute("animalType", simba.getAnimalType());
+    Accounts bankaccounts = new Accounts();
+    bankaccounts.addAccount(new BankAccount("Simba", 2000, "Lion"));
+
+    model.addAttribute("name", bankaccounts.getAccount("Simba").getName());
+    model.addAttribute("balance", bankaccounts.getAccount("Simba").getBalance());
+    model.addAttribute("animalType", bankaccounts.getAccount("Simba").getAnimalType());
 
     return "show";
   }
