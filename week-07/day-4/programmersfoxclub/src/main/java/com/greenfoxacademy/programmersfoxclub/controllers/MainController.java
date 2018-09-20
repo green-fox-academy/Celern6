@@ -12,15 +12,16 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class MainController {
 
-  @Autowired
-  Foxes foxes;
+ Foxes foxlist = new Foxes();
 
   @GetMapping("/")
   public String main (@RequestParam(value = "name", required = false) String name, Model model){
-    if (name != null){
-    model.addAttribute("name", name);
-
-    return "index";
+    if (name != null && foxlist.getFox(name).getName() == null){
+      foxlist.addFox(name, "babybunnies", "beer");
+      model.addAttribute("name", foxlist.getFox(name).getName());
+      model.addAttribute("food", foxlist.getFox(name).getFood());
+      model.addAttribute("drink", foxlist.getFox(name).getDrink());
+      return "index";
     } else {
       return "redirect:/login";
     }

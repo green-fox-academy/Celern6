@@ -6,12 +6,12 @@ import java.util.List;
 public class Fox {
 
   private String name;
-  private int food;
-  private int drink;
+  private String food;
+  private String drink;
 
-  List<String> tricks;
+  private List<String> tricks;
 
-  public Fox(String name, int food, int drink){
+  public Fox(String name, String food, String drink){
     this.name = name;
     this.food = food;
     this.drink = drink;
@@ -26,19 +26,19 @@ public class Fox {
     this.name = name;
   }
 
-  public int getFood() {
+  public String getFood() {
     return food;
   }
 
-  public void setFood(int food) {
+  public void setFood(String food) {
     this.food = food;
   }
 
-  public int getDrink() {
+  public String getDrink() {
     return drink;
   }
 
-  public void setDrink(int drink) {
+  public void setDrink(String drink) {
     this.drink = drink;
   }
 }
