@@ -17,7 +17,7 @@ public class MainController {
   }
 
   @PostMapping()
-  public void xy (@RequestParam("name")){
-
+  public String namepost (@RequestParam("name") String name){
+    return "index";
   }
 }

@@ -18,4 +18,27 @@ public class Fox {
     tricks = new ArrayList<>();
   }
 
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public int getFood() {
+    return food;
+  }
+
+  public void setFood(int food) {
+    this.food = food;
+  }
+
+  public int getDrink() {
+    return drink;
+  }
+
+  public void setDrink(int drink) {
+    this.drink = drink;
+  }
 }
