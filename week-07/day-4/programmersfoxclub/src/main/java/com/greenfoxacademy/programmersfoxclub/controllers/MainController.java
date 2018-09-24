@@ -16,17 +16,16 @@ public class MainController {
 
   @GetMapping("/")
   public String main (@RequestParam(value = "name", required = false) String name, Model model){
-    if (name != null && foxlist.getFox(name).getName() == null){
-      foxlist.addFox(name, "babybunnies", "beer");
-      model.addAttribute("name", foxlist.getFox(name).getName());
-      model.addAttribute("food", foxlist.getFox(name).getFood());
-      model.addAttribute("drink", foxlist.getFox(name).getDrink());
+    if (name != null){
+      model.addAttribute("fox", foxlist.getFox(name));
+//      model.addAttribute("name", foxlist.getFox(name).getName());
+//      model.addAttribute("food", foxlist.getFox(name).getFood());
+//      model.addAttribute("drink", foxlist.getFox(name).getDrink());
       return "index";
     } else {
       return "redirect:/login";
     }
   }
-
 
   @GetMapping("/login")
   public String login (Model model){
@@ -36,5 +35,10 @@ public class MainController {
   @PostMapping("/login")
   public String namepost (@RequestParam("name") String name){
     return "redirect:/?name="+name;
+  }
+
+  @GetMapping("/nutritionstore")
+  public String nutrition(){
+    return "nutritionstore";
   }
 }

@@ -11,18 +11,20 @@ public class Foxes {
 
   public Foxes() {
     foxlist = new ArrayList<>();
+    foxlist.add( new Fox("Vuk", "babybunnies", "beer"));
   }
 
   public void addFox(String name, String food, String drink){
     foxlist.add(new Fox(name, food, drink));
   }
 
-  public Fox getFox(String name){
-    for (Fox oneElement : foxlist) {
-      if (oneElement.getName() == name){
-        return oneElement;
+  public Fox getFox (String name){
+    List<Fox> foxes = new ArrayList<>();
+    for (int i = 0; i < foxlist.size(); i++) {
+      if (foxlist.get(i).getName().equals(name)){
+        foxes.add(foxlist.get(i));
       }
     }
-    return null;
+    return foxes.get(0);
   }
 }
