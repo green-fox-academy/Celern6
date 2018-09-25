@@ -21,6 +21,13 @@ public class Todo {
     this.done = done;
   }
 
+  public Todo(Long id, String title, boolean urgent, boolean done) {
+    this.id = id;
+    this.title = title;
+    this.urgent = urgent;
+    this.done = done;
+  }
+
   public Todo(){}
 
   public Long getId() {
@@ -39,7 +46,7 @@ public class Todo {
     this.title = title;
   }
 
-  public boolean isUrgent() {
+  public boolean getUrgent() {
     return urgent;
   }
 
@@ -47,7 +54,7 @@ public class Todo {
     this.urgent = urgent;
   }
 
-  public boolean isDone() {
+  public boolean getDone() {
     return done;
   }
 
