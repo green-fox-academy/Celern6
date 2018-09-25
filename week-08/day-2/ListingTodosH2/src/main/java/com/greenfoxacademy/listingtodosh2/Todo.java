@@ -6,6 +6,6 @@ public class Todo {
   boolean urgent = false;
   boolean done = false;
 
-  
+
 
 }
