@@ -14,7 +14,7 @@ public class TodoController {
     return "todo";
   }
 
-  @GetMapping("/list")
+  @GetMapping(value = {"/", "/list"})
   public String list(Model model){
     return "This is my first todo";
   }
