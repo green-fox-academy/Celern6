@@ -28,13 +28,13 @@ public class TodoController {
   }
 
   @GetMapping(value = {"/", "/list"})
-  public String list(@RequestParam(value = "isActive", required = false) String name, Model model){
-    if (name.equals("true")){
-      model.addAttribute("todos", todoRepository.findAllByDoneIsTrue());
-    } else if (name.equals("false")){
-      model.addAttribute("todos", todoRepository.findAllByDoneIsFalse());
-    } else if (name.equals(null)) {
+  public String list(@RequestParam(value = "isActive", required = false) String isActive, Model model){
+    if (isActive == null){
       model.addAttribute("todos", todoRepository.findAll());
+    } else if (isActive.equals("false")){
+      model.addAttribute("todos", todoRepository.findAllByDoneIsFalse());
+    } else if (isActive.equals("true")) {
+      model.addAttribute("todos", todoRepository.findAllByDoneIsTrue());
     }
     return "todolist";
   }
