@@ -1,6 +1,7 @@
-package com.greenfoxacademy.listingtodosh2;
+package com.greenfoxacademy.listingtodosh2.Controller;
 
 
+import com.greenfoxacademy.listingtodosh2.Repository.TodoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,11 +13,11 @@ public class TodoController {
 
 
 
-  Repository repository;
+  TodoRepository todoRepository;
 
   @Autowired
-  public TodoController(Repository repository) {
-    this.repository = repository;
+  public TodoController(TodoRepository todoRepository) {
+    this.todoRepository = todoRepository;
   }
 
 

@@ -1,4 +1,4 @@
-package com.greenfoxacademy.listingtodosh2;
+package com.greenfoxacademy.listingtodosh2.Model;
 
 public class Todo {
   int id;
