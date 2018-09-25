@@ -7,8 +7,8 @@
 </head>
 <body>
 <h3>TODOS FOR TODAY:</h3>
-<ul type="disc" th:each="todo : ${todoList}">
-    <li th:text="${todo}"></li>
+<ul type="disc" th:each="todo : ${todos}">
+    <li th:text="${todo.title}"></li>
 </ul>
 </body>
 </html>
