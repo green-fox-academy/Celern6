@@ -23,10 +23,10 @@ public class ConnectionwithsqlApplication implements CommandLineRunner {
 
   @Override
   public void run(String... args) throws Exception {
-    todoRepository.save(new Todo("Walk the dog"));
-    todoRepository.save(new Todo("Take a dump"));
-    todoRepository.save(new Todo("Play the guitar"));
-    todoRepository.save(new Todo("Beat Adam!!! "));
+    todoRepository.save(new Todo("Walk the dog", true, false));
+    todoRepository.save(new Todo("Take a dump", false, true));
+    todoRepository.save(new Todo("Play the guitar", true, false));
+    todoRepository.save(new Todo("Beat Adam!!! ", true, true));
     System.out.println("szia");
   }
 }

@@ -6,9 +6,20 @@
     <meta charset="utf-8"/>
 </head>
 <body>
-<h3>TODOS FOR TODAY:</h3>
-<ul type="disc" th:each="todo : ${todos}">
-    <li th:text="${todo.title}"></li>
-</ul>
+    <h3>TODOS FOR TODAY:</h3>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Action</th>
+            <th>Done</th>
+            <th>Urgent</th>
+        </tr>
+        <tr th:each="todo : ${todos}">
+            <td th:text="${todo.id}"></td>
+            <td th:text="${todo.title}"></td>
+            <td th:text="${todo.isDone()}"></td>
+            <td th:text="${todo.isUrgent()}"></td>
+        </tr>
+    </table>
 </body>
 </html>

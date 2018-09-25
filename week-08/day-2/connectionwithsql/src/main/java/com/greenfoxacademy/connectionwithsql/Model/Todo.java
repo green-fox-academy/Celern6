@@ -15,7 +15,7 @@ public class Todo {
   boolean urgent = false;
   boolean done = false;
 
-  public Todo(String title) {
+  public Todo(String title, boolean urgent, boolean done) {
     this.title = title;
     this.urgent = urgent;
     this.done = done;
