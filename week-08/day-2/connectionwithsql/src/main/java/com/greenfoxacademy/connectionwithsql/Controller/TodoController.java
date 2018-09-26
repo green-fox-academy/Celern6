@@ -66,7 +66,7 @@ public class TodoController {
                                @ModelAttribute (value = "urgent") boolean urgent,
                                @ModelAttribute (value = "done") boolean done
                                ){
-    todoRepository.findById(id).
+    todoRepository.
     return "redirect:/list";
   }
 
