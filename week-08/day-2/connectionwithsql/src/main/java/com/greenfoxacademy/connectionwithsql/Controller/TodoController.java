@@ -56,18 +56,15 @@ public class TodoController {
   }
 
   @GetMapping("/{id}/edit")
-  public String editTodo(){
+  public String showEditForm(@PathVariable(value = "id") Long id, Model model) {
+    model.addAttribute(todoRepository.findById(id).orElse(null));
     return "editTodo";
   }
 
   @PostMapping("/{id}/edit")
-  public String submitEditTodo(@PathVariable ("id") Long id,
-                               @ModelAttribute (value = "desc") String desc,
-                               @ModelAttribute (value = "urgent") boolean urgent,
-                               @ModelAttribute (value = "done") boolean done
-                               ){
-    todoRepository.
-    return "redirect:/list";
+  public String submitEdit(@ModelAttribute(value = "todo") Todo todo) {
+    todoRepository.save(todo);
+    return "redirect:/";
   }
 
 }

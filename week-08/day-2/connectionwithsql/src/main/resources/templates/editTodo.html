@@ -6,16 +6,15 @@
     <meta charset="utf-8"/>
 </head>
 <body>
-<form method="post">
-    <h1>Edit Todo</h1>
-    <label>Todo description</label>
-    <input name="desc" type="text"><br>
-    <label>Urgent</label>
-    <input name="urgent" type="checkbox"><br>
-    <label>Done</label>
-    <input name="done" type="checkbox"><br>
-    <input type="submit">
-    <a href="/list">Cancel</a>
+<form method="POST" th:object="${todo}">
+    <label>What to do?</label>
+    <input type="text" th:field="*{title}">
+    <label>Urgent?</label>
+    <input type="checkbox" th:field="*{urgent}">
+    <label>Done?</label>
+    <input type="checkbox" th:field="*{done}">
+    <button type="submit">Edit</button>
+    <a href="/">Cancel</a>
 </form>
 </body>
 </html>
