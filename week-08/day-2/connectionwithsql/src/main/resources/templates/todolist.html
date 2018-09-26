@@ -1,30 +1,63 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html"
+      xmlns:border="http://java.sun.com/xml/ns/persistence/orm">
 <head>
     <title>Todolist</title>
     <link href="webjars/bootstrap/3.3.7-1/css/bootstrap.min.css" rel="stylesheet"/>
     <meta charset="utf-8"/>
+    <style>
+        body{
+
+        }
+        table {
+            border: solid darkgrey 1px;
+            width: 100%;
+            position: center;
+            margin: 1px 0px;
+        }
+        th, td{
+            text-align: left;
+            padding: 10px;
+        }
+        tr:nth-child(even){
+            background-color: darkgrey;
+        }
+        th{
+            background-color: black;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <h1 class="h1">TODOS FOR TODAY: </h1>
-    <table class="table table-striped table-hover">
+<form style="padding-top: 20px; font-family: Cambria">
+    <h1 th:style="'text-align:center;'" class="h1">TODOS FOR TODAY: </h1>
+</form>
+<form style="width: 800px; margin: auto; padding-top: 100px;">
+    <table class="table-striped"><!--*class="table table-hover"-->
         <tr>
             <th>ID</th>
             <th>Action</th>
             <th>Done</th>
             <th>Urgent</th>
+            <th></th>
+            <th></th>
         </tr>
         <tr th:each="todo : ${todos}">
             <td th:text="${todo.id}"></td>
             <td th:text="${todo.title}"></td>
             <td th:text="${todo.done}"></td>
             <td th:text="${todo.urgent}"></td>
-            <td><a th:href="'/' + ${todo.id} + '/edit'" class="btn btn-primary btn-xs btn-warning" role="button">Edit</a> </td>
-            <td><a th:href="'/' + ${todo.id} + '/delete'" class="btn btn-primary btn-xs btn-danger" role="button">Delete</a> </td>
+            <td><a th:href="'/' + ${todo.id} + '/edit'" class="btn btn-primary btn-xs btn-warning"
+                   role="button">Edit</a></td>
+            <td><a th:href="'/' + ${todo.id} + '/delete'" class="btn btn-primary btn-xs btn-danger"
+                   role="button">Delete</a></td>
         </tr>
     </table>
-    <p th:style="'text-align:center;'"><a href="/addTodo" class="btn btn-primary active " role="button">Add new todo</a></p>
-    <script src="webjars/jquery/1.11.1/jquery.min.js"></script>
-    <script src="webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
+</form>
+<form style="text-align: center; padding-top: 15px">
+    <a href="/addTodo" class="btn btn-primary active " role="button">Add new todo</a>
+</form>
+<script src="webjars/jquery/1.11.1/jquery.min.js"></script>
+<script src="webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
 </body>
 </html>
