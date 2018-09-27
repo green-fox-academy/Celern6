@@ -11,8 +11,6 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class TodoController {
 
-
-
   TodoRepository todoRepository;
 
   @Autowired
@@ -66,5 +64,12 @@ public class TodoController {
     todoRepository.save(todo);
     return "redirect:/";
   }
+
+  @GetMapping("/search")
+  public String searchlist (@RequestParam(value = "content") String content, Model model){
+    model.addAttribute("todos", todoRepository.findByTitleContaining(content));
+    return "todolist";
+  }
+
 
 }

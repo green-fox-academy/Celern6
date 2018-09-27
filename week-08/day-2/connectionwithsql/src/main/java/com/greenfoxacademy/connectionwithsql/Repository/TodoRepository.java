@@ -14,6 +14,8 @@ public interface TodoRepository extends CrudRepository<Todo, Long> {
   List<Todo> findAll();
   List<Todo> findAllByDoneIsFalse();
   List<Todo> findAllByDoneIsTrue();
+  List<Todo> findByTitleContaining(String input);
+
 
   @Override
   Optional<Todo> findById(Long aLong);

@@ -29,8 +29,12 @@
     </style>
 </head>
 <body>
-<form style="padding-top: 20px; font-family: Cambria">
+<form style="padding-top: 20px; font-family: Helvetica ">
     <h1 th:style="'text-align:center;'" class="h1">TODOS FOR TODAY: </h1>
+</form>
+<form action="/search" method="get" style="margin: auto; width: 50px">
+    <input type="text" name="content" placeholder="Search by content">
+    <input type="submit">
 </form>
 <form style="width: 800px; margin: auto; padding-top: 50px;">
     <table class="table-striped"><!--*class="table table-hover"-->
@@ -46,7 +50,15 @@
             <td th:text="${todo.id}"></td>
             <td th:text="${todo.title}"></td>
             <td th:text="${todo.done}"></td>
+                <!--<div th:switch=“${todo.done}“>-->
+                    <!--<td th:case=“true”><span class=“glyphicon glyphicon-ok” style=“color: green”></span></td>-->
+                    <!--<td th:case=“false”><span class=“glyphicon glyphicon-remove” style=“color: red”></span></td>-->
+                <!--</div>-->
             <td th:text="${todo.urgent}"></td>
+                <!--<div th:switch=“${todo.urgent}“>-->
+                    <!--<td th:case=“true”><span class=“glyphicon glyphicon-ok” style=“color: green”></span></td>-->
+                    <!--<td th:case=“false”><span class=“glyphicon glyphicon-remove” style=“color: red”></span></td>-->
+                <!--</div>-->
             <td><a th:href="'/' + ${todo.id} + '/edit'" class="btn btn-primary btn-xs btn-warning"
                    role="button">Edit</a></td>
             <td><a th:href="'/' + ${todo.id} + '/delete'" class="btn btn-primary btn-xs btn-danger"
