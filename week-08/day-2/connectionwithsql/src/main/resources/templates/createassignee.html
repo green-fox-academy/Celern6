@@ -19,8 +19,8 @@
 <form class="form-inline" method="post" style="margin: auto; width: 500px">
     <h1 th:style="'text-align:center;'">Add new Assignee</h1>
     <form style="margin: auto" th:object="${assignee}">
-        <input th:field="*{name}" class="form-control col-md-push-0" type="text" placeholder="Please enter a new assignee"><br>
-        <input th:field="*{email}" class="form-control col-md-push-0" type="text" placeholder="Please enter the e-mail">
+        <input th:field="*{name}" class="form-control col-md-push-0" type="text" placeholder="Please enter a new assignee" style="text-align: center"><br>
+        <input th:field="*{email}" class="form-control col-md-push-0" type="text" placeholder="Please enter the e-mail" style="text-align: center">
         <input type="submit" class="btn-sm">
     </form>
 </form>

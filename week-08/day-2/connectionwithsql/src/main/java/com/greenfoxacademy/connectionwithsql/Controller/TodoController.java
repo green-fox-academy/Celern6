@@ -100,4 +100,9 @@ public class TodoController {
     assigneeRepo.save(input);
     return "redirect:/assignees";
   }
+
+  @GetMapping("/editassignee")
+  public String editAssignee(){
+    return "editassignee";
+  }
 }
