@@ -1,6 +1,7 @@
 package com.greenfoxacademy.connectionwithsql.Controller;
 
 
+import com.greenfoxacademy.connectionwithsql.Model.Assignee;
 import com.greenfoxacademy.connectionwithsql.Model.Todo;
 import com.greenfoxacademy.connectionwithsql.Repository.AssigneeRepo;
 import com.greenfoxacademy.connectionwithsql.Repository.TodoRepository;
@@ -82,6 +83,21 @@ public class TodoController {
     return "assigneelist";
   }
 
-  @PostMapping("/assignees")
-  public void deleteAssignee
+  @GetMapping("/assignees/{id}/delete")
+  public String deleteAssignee(@PathVariable("id") Long id) {
+    assigneeRepo.deleteById(id);
+    return "redirect:/assignees";
+  }
+
+  @GetMapping("/addAssignee")
+  public String createAssignee(Model model){
+    model.addAttribute(new Assignee());
+    return "createassignee";
+  }
+
+  @PostMapping("/addAssignee")
+  public String submitAssignee(@ModelAttribute(value = "assignee") Assignee input) {
+    assigneeRepo.save(input);
+    return "redirect:/assignees";
+  }
 }

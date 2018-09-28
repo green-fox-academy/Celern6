@@ -39,7 +39,7 @@
         </li>
     </ul>
     <ul>
-        <form class="form-inline pull-right" action="/search" method="get">
+        <form class="form-inline pull-right" action="/search" method="get" style="padding-top: 8px">
             <input class="form-control mr-sm-2" type="text" name="content" placeholder="Search by content">
             <button class="btn btn-success" type="submit">Search</button>
         </form>
@@ -66,16 +66,8 @@
         <tr th:each="todo : ${todos}">
             <td th:text="${todo.id}"></td>
             <td th:text="${todo.title}"></td>
-            <td th:text="${todo.done}"></td>
-                <!--<div th:switch=“${todo.done}“>-->
-                    <!--<td th:case=“true”><span class=“glyphicon glyphicon-ok” style=“color: green”></span></td>-->
-                    <!--<td th:case=“false”><span class=“glyphicon glyphicon-remove” style=“color: red”></span></td>-->
-                <!--</div>-->
-            <td th:text="${todo.urgent}"></td>
-                <!--<div th:switch=“${todo.urgent}“>-->
-                    <!--<td th:case=“true”><span class=“glyphicon glyphicon-ok” style=“color: green”></span></td>-->
-                    <!--<td th:case=“false”><span class=“glyphicon glyphicon-remove” style=“color: red”></span></td>-->
-                <!--</div>-->
+            <td th:text="${todo.done}?'✔':'✘'"></td>
+            <td th:text="${todo.urgent}?'✔':'✘'"></td>
             <td><a th:href="'/' + ${todo.id} + '/edit'" class="btn btn-primary btn-xs btn-warning"
                    role="button">Edit</a></td>
             <td><a th:href="'/' + ${todo.id} + '/delete'" class="btn btn-primary btn-xs btn-danger"

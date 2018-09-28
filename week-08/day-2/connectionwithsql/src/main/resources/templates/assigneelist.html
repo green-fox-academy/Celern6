@@ -54,17 +54,22 @@
             <th>ID</th>
             <th>Name</th>
             <th>E-mail</th>
+            <th></th>
+            <th></th>
         </tr>
         <tr th:each="assignee : ${assignees}">
             <td th:text="${assignee.id}"></td>
             <td th:text="${assignee.name}"></td>
             <td th:text="${assignee.email}"></td>
-            <td><a th:href="'/' + ${assignee.id} + '/edit'" class="btn btn-primary btn-xs btn-warning"
+            <td><a th:href="'/assignees/' + ${assignee.id} + '/edit'" class="btn btn-primary btn-xs btn-warning"
                    role="button">Edit</a></td>
-            <td><a th:href="'/' + ${assignee.id} + '/delete'" class="btn btn-primary btn-xs btn-danger"
+            <td><a th:href="'/assignees/' + ${assignee.id} + '/delete'" class="btn btn-primary btn-xs btn-danger"
                    role="button">Delete</a></td>
         </tr>
     </table>
+    <form style="text-align: center; padding-top: 15px">
+        <a href="/addAssignee" class="btn btn-primary active " role="button">Add new assignee</a>
+    </form>
 </form>
 <!--<form style="text-align: center; padding-top: 15px">-->
     <!--<a href="#" class="btn btn-primary active " role="button">Add new assignee</a>-->

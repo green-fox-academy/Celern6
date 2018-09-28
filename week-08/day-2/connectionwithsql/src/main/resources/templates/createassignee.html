@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Todolist</title>
+    <link href="webjars/bootstrap/3.3.7-1/css/bootstrap.min.css" rel="stylesheet"/>
+    <meta charset="utf-8"/>
+</head>
+<body>
+<nav class="nav navbar-inverse">
+    <ul class="nav navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="/">TODOS</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/assignees">ASSIGNEES</a>
+        </li>
+    </ul>
+</nav>
+<form class="form-inline" method="post" style="margin: auto; width: 500px">
+    <h1 th:style="'text-align:center;'">Add new Assignee</h1>
+    <form style="margin: auto" th:object="${assignee}">
+        <input th:field="*{name}" class="form-control col-md-push-0" type="text" placeholder="Please enter a new assignee"><br>
+        <input th:field="*{email}" class="form-control col-md-push-0" type="text" placeholder="Please enter the e-mail">
+        <input type="submit" class="btn-sm">
+    </form>
+</form>
+<script src="webjars/jquery/1.11.1/jquery.min.js"></script>
+<script src="webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
+</body>
+</html>
