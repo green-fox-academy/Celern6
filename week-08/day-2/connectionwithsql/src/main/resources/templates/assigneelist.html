@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html"
       xmlns:border="http://java.sun.com/xml/ns/persistence/orm">
 <head>
-    <title>Todolist</title>
+    <title>Assigneelist</title>
     <link href="webjars/bootstrap/3.3.7-1/css/bootstrap.min.css" rel="stylesheet"/>
     <meta charset="utf-8"/>
     <style>
@@ -43,49 +43,32 @@
             <input class="form-control mr-sm-2" type="text" name="content" placeholder="Search by content">
             <button class="btn btn-success" type="submit">Search</button>
         </form>
-
     </ul>
 </nav>
 <form style="padding-top: 20px; font-family: Helvetica ">
-    <h1 th:style="'text-align:center;'" class="h1">TODOS FOR TODAY: </h1>
+    <h1 th:style="'text-align:center;'" class="h1">Assignees: </h1>
 </form>
-<!--<form action="/search" method="get" style="margin: auto 600px;">-->
-    <!--<input type="text" name="content" placeholder="Search by content">-->
-    <!--<input type="submit">-->
-<!--</form>-->
 <form style="width: 800px; margin: auto; padding-top: 20px;">
     <table class="table-striped"><!--*class="table table-hover"-->
         <tr>
             <th>ID</th>
-            <th>Action</th>
-            <th>Done</th>
-            <th>Urgent</th>
-            <th></th>
-            <th></th>
+            <th>Name</th>
+            <th>E-mail</th>
         </tr>
-        <tr th:each="todo : ${todos}">
-            <td th:text="${todo.id}"></td>
-            <td th:text="${todo.title}"></td>
-            <td th:text="${todo.done}"></td>
-                <!--<div th:switch=“${todo.done}“>-->
-                    <!--<td th:case=“true”><span class=“glyphicon glyphicon-ok” style=“color: green”></span></td>-->
-                    <!--<td th:case=“false”><span class=“glyphicon glyphicon-remove” style=“color: red”></span></td>-->
-                <!--</div>-->
-            <td th:text="${todo.urgent}"></td>
-                <!--<div th:switch=“${todo.urgent}“>-->
-                    <!--<td th:case=“true”><span class=“glyphicon glyphicon-ok” style=“color: green”></span></td>-->
-                    <!--<td th:case=“false”><span class=“glyphicon glyphicon-remove” style=“color: red”></span></td>-->
-                <!--</div>-->
-            <td><a th:href="'/' + ${todo.id} + '/edit'" class="btn btn-primary btn-xs btn-warning"
+        <tr th:each="assignee : ${assignees}">
+            <td th:text="${assignee.id}"></td>
+            <td th:text="${assignee.name}"></td>
+            <td th:text="${assignee.email}"></td>
+            <td><a th:href="'/' + ${assignee.id} + '/edit'" class="btn btn-primary btn-xs btn-warning"
                    role="button">Edit</a></td>
-            <td><a th:href="'/' + ${todo.id} + '/delete'" class="btn btn-primary btn-xs btn-danger"
+            <td><a th:href="'/' + ${assignee.id} + '/delete'" class="btn btn-primary btn-xs btn-danger"
                    role="button">Delete</a></td>
         </tr>
     </table>
 </form>
-<form style="text-align: center; padding-top: 15px">
-    <a href="/addTodo" class="btn btn-primary active " role="button">Add new todo</a>
-</form>
+<!--<form style="text-align: center; padding-top: 15px">-->
+    <!--<a href="#" class="btn btn-primary active " role="button">Add new assignee</a>-->
+<!--</form>-->
 <script src="webjars/jquery/1.11.1/jquery.min.js"></script>
 <script src="webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
 </body>
