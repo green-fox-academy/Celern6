@@ -1,26 +1,28 @@
 package com.greenfoxacademy.restapipractice.Model;
 
+import org.springframework.stereotype.Component;
 
+@Component
 public class Doubling {
 
-  private Integer recieved;
+  private Integer received;
   private Integer result;
 
-  public Doubling(Integer recieved){
-    this.recieved = recieved;
-    this.result = recieved*2;
-  }
 
   public Doubling(){
-
   }
 
-  public Integer getRecieved() {
-    return recieved;
+  public Doubling(Integer recieved, Integer result){
+    this.received = recieved;
+    this.result = result;
   }
 
-  public void setRecieved(Integer recieved) {
-    this.recieved = recieved;
+  public Integer getReceived() {
+    return received;
+  }
+
+  public void setReceived(Integer received) {
+    this.received = received;
   }
 
   public Integer getResult() {
@@ -30,6 +32,4 @@ public class Doubling {
   public void setResult(Integer result) {
     this.result = result;
   }
-
-
 }
