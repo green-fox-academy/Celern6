@@ -28,12 +28,8 @@ public class Mainrestcontroller {
   }
 
   @GetMapping("/greeter")
-  public Object greeter(@RequestParam(value = "name") String name,
-                        @RequestParam(value = "title") String title) {
-    if (name != null && title != null){
+  public Object greeter(@RequestParam(value = "name", required = false) String name,
+                        @RequestParam(value = "title", required = false) String title) {
     return mainService.Greeter(name, title);
-    } else {
-      return null;
-    }
   }
 }
