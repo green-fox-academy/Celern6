@@ -20,8 +20,15 @@
         <tr th:each="planet : ${planets}">
             <td th:text="${planet.name}"></td>
             <td th:text="${planet.population}"></td>
-            <td></td>
-            <td th:text="${ship.utilization}"></td>
+            <td th:if="${ship.planet} == ${planet.name}">
+                <a><- To planet</a>
+                <a> To ship -></a>
+            </td>
+            <td th:unless="${ship.planet} == ${planet.name}">
+                <input type="button">
+            </td>
+            <td th:if="${ship.planet} == ${planet.name}" th:text="${ship.utilization}"></td>
+            <td th:unless="${ship.planet} == ${planet.name}">-</td>
     </tbody>
 </table>
 </body>
