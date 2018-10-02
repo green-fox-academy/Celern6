@@ -17,7 +17,11 @@
         </tr>
     </thead>
     <tbody>
-
+        <tr th:each="planet : ${planets}">
+            <td th:text="${planet.name}"></td>
+            <td th:text="${planet.population}"></td>
+            <td></td>
+            <td th:text="${ship.utilization}"></td>
     </tbody>
 </table>
 </body>

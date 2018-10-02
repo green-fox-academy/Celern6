@@ -11,7 +11,7 @@ public class Spaceship {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long id;
-  private int max_capacity;
+  private int maxCapacity;
   private String planet;
   private int utilization;
 
@@ -24,11 +24,11 @@ public class Spaceship {
   }
 
   public int getMax_capacity() {
-    return max_capacity;
+    return maxCapacity;
   }
 
   public void setMax_capacity(int max_capacity) {
-    this.max_capacity = max_capacity;
+    this.maxCapacity = max_capacity;
   }
 
   public String getPlanet() {

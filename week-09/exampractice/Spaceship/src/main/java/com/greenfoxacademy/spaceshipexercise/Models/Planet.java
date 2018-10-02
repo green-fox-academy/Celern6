@@ -1,9 +1,11 @@
 package com.greenfoxacademy.spaceshipexercise.Models;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+@Entity
 public class Planet {
 
 
@@ -11,7 +13,7 @@ public class Planet {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
   private String name;
-  private int population;
+  private long population;
 
   public Long getId() {
     return id;
@@ -29,11 +31,11 @@ public class Planet {
     this.name = name;
   }
 
-  public int getPopulation() {
+  public long getPopulation() {
     return population;
   }
 
-  public void setPopulation(int population) {
+  public void setPopulation(long population) {
     this.population = population;
   }
 }

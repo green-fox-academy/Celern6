@@ -5,6 +5,7 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface Spaceshiprepo extends CrudRepository<Spaceship, Long> {
+public interface Spaceshiprepository extends CrudRepository<Spaceship, Long> {
 
+  Spaceship findById(long id);
 }
