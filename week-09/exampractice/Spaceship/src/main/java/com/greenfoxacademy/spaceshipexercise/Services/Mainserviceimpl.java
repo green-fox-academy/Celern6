@@ -45,11 +45,22 @@ public class Mainserviceimpl implements Mainservice {
     Planet planet = planetrepository.findById(id);
     Spaceship spaceship = spaceshiprepository.findById(1);
 
+    int freeshipcap = spaceship.getMax_capacity()- (int)spaceship.getUtilization();
 
+    if(freeshipcap > planet.getPopulation()) {
+      spaceship.setUtilization(spaceship.getUtilization()+planet.getPopulation());
+      planet.setPopulation(0);
+    } else if (freeshipcap < planet.getPopulation() && freeshipcap > 0) {
+      spaceship.setUtilization(spaceship.getUtilization()+freeshipcap);
+      planet.setPopulation(planet.getPopulation()-freeshipcap);
+    }
+    planetrepository.save(planet);
+    spaceshiprepository.save(spaceship);
   }
 
   @Override
   public void pplToPlanet(long id) {
+    Planet pla7
 
   }
 
