@@ -2,35 +2,35 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Thymeleaf Exercise #</title>
-    <link rel="stylesheet" th:href="@{/style.css}" />
-    <meta charset="utf-8" />
+    <link rel="stylesheet" th:href="@{/style.css}"/>
+    <meta charset="utf-8"/>
 </head>
 <body>
 <table>
     <h1>Space transporter</h1>
     <thead>
-        <tr>
-            <th>Planet</th>
-            <th>Population</th>
-            <th>Spaceship location</th>
-            <th>People on ship</th>
-        </tr>
+    <tr>
+        <th>Planet</th>
+        <th>Population</th>
+        <th>Spaceship location</th>
+        <th>People on ship</th>
+    </tr>
     </thead>
     <tbody>
-        <tr th:each="planet : ${planets}">
-            <td th:text="${planet.name}"></td>
-            <td th:text="${planet.population}"></td>
-            <td th:if="${ship.planet} == ${planet.name}">
-                <a th:href="'/toplanet/'+${planet.id}"><- To planet</a>
-                <a th:href="'/toship/' + ${planet.id}"> To ship -></a>
-            </td>
-            <td th:unless="${ship.planet} == ${planet.name}">
-                <form>
-                    <input type="submit" value="Move here">
-                </form>
-            </td>
-            <td th:if="${ship.planet} == ${planet.name}" th:text="${ship.utilization}"></td>
-            <td th:unless="${ship.planet} == ${planet.name}">-</td>
+    <tr th:each="planet : ${planets}">
+        <td th:text="${planet.name}"></td>
+        <td th:text="${planet.population}"></td>
+        <td th:if="${ship.planet} == ${planet.name}">
+            <a th:href="'/toplanet/'+${planet.id}"><- To planet</a>
+            <a th:href="'/toship/'+${planet.id}"> To ship -></a>
+        </td>
+        <td th:unless="${ship.planet} == ${planet.name}">
+            <form th:action="'/movehere/'+${planet.id}" method="post">
+                <input type="submit" value="Move here">
+            </form>
+        </td>
+        <td th:if="${ship.planet} == ${planet.name}" th:text="${ship.utilization}"></td>
+        <td th:unless="${ship.planet} == ${planet.name}">-</td>
     </tbody>
 </table>
 </body>

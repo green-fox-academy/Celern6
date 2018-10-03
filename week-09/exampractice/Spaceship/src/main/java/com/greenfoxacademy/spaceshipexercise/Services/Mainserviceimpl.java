@@ -30,4 +30,13 @@ public class Mainserviceimpl implements Mainservice {
   public Spaceship getShip(long id) {
     return spaceshiprepository.findById(id);
   }
+
+  @Override
+  public void shipMover(long id) {
+    Planet planet = planetrepository.findById(id);
+    Spaceship spaceship = spaceshiprepository.findById(1);
+
+    spaceship.setPlanet(planet.getName());
+    spaceshiprepository.save(spaceship);
+  }
 }

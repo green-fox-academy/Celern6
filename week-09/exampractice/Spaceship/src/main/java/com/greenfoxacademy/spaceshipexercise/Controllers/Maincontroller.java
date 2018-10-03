@@ -27,8 +27,9 @@ public class Maincontroller {
   }
 
   @PostMapping("/movehere/{id}")
-  public String movehere(@PathVariable ("id") String id){
-    return null;
+  public String movehere(@PathVariable ("id") long id){
+    mainservice.shipMover(id);
+    return "redirect:/";
   }
 
   @GetMapping("/toship/{id}")
