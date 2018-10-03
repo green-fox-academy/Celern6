@@ -39,4 +39,19 @@ public class Mainserviceimpl implements Mainservice {
     spaceship.setPlanet(planet.getName());
     spaceshiprepository.save(spaceship);
   }
+
+  @Override
+  public void pplToShip(long id) {
+    Planet planet = planetrepository.findById(id);
+    Spaceship spaceship = spaceshiprepository.findById(1);
+
+
+  }
+
+  @Override
+  public void pplToPlanet(long id) {
+
+  }
+
+
 }

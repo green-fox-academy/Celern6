@@ -33,12 +33,14 @@ public class Maincontroller {
   }
 
   @GetMapping("/toship/{id}")
-  public String toship(@PathVariable ("id") String id){
-    return null;
+  public String toship(@PathVariable ("id") long id){
+    mainservice.pplToShip(id);
+    return "redirect:/";
   }
 
   @GetMapping("/toplanet/{id}")
-  public String toplanet(@PathVariable ("id") String id){
+  public String toplanet(@PathVariable ("id") long id){
+    mainservice.pplToPlanet(id);
     return null;
   }
 

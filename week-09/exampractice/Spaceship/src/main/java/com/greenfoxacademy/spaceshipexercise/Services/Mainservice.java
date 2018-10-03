@@ -11,4 +11,6 @@ public interface Mainservice {
   List<Planet> getPlanets();
   Spaceship getShip(long id);
   void shipMover(long id);
+  void pplToShip(long id);
+  void pplToPlanet(long id);
 }
