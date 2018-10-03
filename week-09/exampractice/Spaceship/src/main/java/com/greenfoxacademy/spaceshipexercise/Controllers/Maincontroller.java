@@ -41,7 +41,7 @@ public class Maincontroller {
   @GetMapping("/toplanet/{id}")
   public String toplanet(@PathVariable ("id") long id){
     mainservice.pplToPlanet(id);
-    return null;
+    return "redirect:/";
   }
 
 

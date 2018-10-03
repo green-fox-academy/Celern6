@@ -60,7 +60,14 @@ public class Mainserviceimpl implements Mainservice {
 
   @Override
   public void pplToPlanet(long id) {
-    Planet pla7
+    Planet planet = planetrepository.findById(id);
+    Spaceship spaceship = spaceshiprepository.findById(1);
+
+    planet.setPopulation(planet.getPopulation()+spaceship.getUtilization());
+    spaceship.setUtilization(0);
+
+    planetrepository.save(planet);
+    spaceshiprepository.save(spaceship);
 
   }
 
